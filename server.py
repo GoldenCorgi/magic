@@ -31,7 +31,7 @@ def frontend_get_data():
 def hardware_get_data():
     return RAM_frontend
 
-@app.post("/hardware/push_data}")
+@app.post("/hardware/push_data")
 def hardware_push_data(data: Optional[dict] = None):
     RAM_hardware.append(data)
     return True
