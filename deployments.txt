@@ -1,0 +1,5 @@
+git pull
+ibmcloud login
+ibmcloud target -r us-south
+ibmcloud target --cf
+ibmcloud cf push
