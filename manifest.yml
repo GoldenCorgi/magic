@@ -1,0 +1,4 @@
+---
+applications:
+ - name: scdf-lyfsavers
+   memory: 256M
