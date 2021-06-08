@@ -1,6 +1,7 @@
 from typing import Optional
 
 from fastapi import FastAPI
+import uvicorn
 
 app = FastAPI()
 
@@ -29,3 +30,6 @@ def hardware_get_data():
 def hardware_push_data(data: Optional[dict] = None):
     RAM_hardware.append(data)
     return True
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=80, log_level="info")
