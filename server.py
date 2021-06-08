@@ -8,10 +8,10 @@ from fastapi.responses import RedirectResponse
 app = FastAPI()
 
 
-@app.get("")
+@app.get("", include_in_schema=False)
 def read_root():
     return RedirectResponse("/docs")
-@app.get("/")
+@app.get("/", include_in_schema=False)
 def read_root2():
     return RedirectResponse("/docs")
 
